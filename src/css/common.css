@@ -25,16 +25,25 @@
   left: 42%;
   z-index: 99;
 }
+
 .loader__anim {
-  position: absolute;
-  top: -200%;
-  left: 45%;
-  transform: rotateZ(45deg);
-  perspective: 1000px;
-  border-radius: 50%;
   width: 48px;
   height: 48px;
-  color: #fff;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .is-hidden {
